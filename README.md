@@ -1,16 +1,22 @@
-# hidden_inventory
+# Hidden Inventory
 
-A new Flutter project.
+Hidden Inventory. Now powered by Flutter.
 
-## Getting Started
+```credential
+Nama  : Muhammad Milian Alkindi
+Kelas : PBP A
+```
 
-This project is a starting point for a Flutter application.
+## Tugas 7: Elemen Dasar Flutter
 
-A few resources to get you started if this is your first Flutter project:
+> Q: Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+A: ...
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> Q: Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
+
+A: ...
+
+> Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)
+
+A: ...
