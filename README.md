@@ -7,6 +7,33 @@ Nama  : Muhammad Milian Alkindi
 Kelas : PBP A
 ```
 
+| Jump ke tugas |
+| :-: |
+| [Tugas 7](#tugas-7-elemen-dasar-flutter) |
+| [Tugas 8](#tugas-8-flutter-navigation-layouts-forms-and-input-elements) |
+
+## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
+
+> Q: Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
+
+A: ...
+
+> Q: Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+
+A: ...
+
+> Q: Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
+
+A: ...
+
+> Q: Bagaimana penerapan clean architecture pada aplikasi Flutter?
+
+A: ...
+
+> Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)
+
+A: ...
+
 ## Tugas 7: Elemen Dasar Flutter
 
 > Q: Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
@@ -49,3 +76,6 @@ Beberapa widget yang saya gunakan untuk menyelesaikan tugas ini:
 4. Menambahkan `Scaffold`, `AppBar`, `SingleChildScrollView` dan *widget* lainnya di function `Widget build()` milik `MyHomePage`. *Widget-widget* tersebut akan mendefinisikan layout dan menampilkan tombol yang dibuat menggunakan `ItemCard`.
 5. Menambahkan floating `Snackbar` ke `ItemCard` sehingga muncul sebuah pesan ketika tombol di*tap*
 6. Dan terakhir, menambahkan `darkTheme` ke `App` yang berada di `lib/main.dart` supaya aplikasi dapat ditampilkan dengan *dark mode*
+
+---
+[↑ Back to top](#hidden-inventory)
