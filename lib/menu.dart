@@ -70,12 +70,13 @@ final List<OptionsItem> items = [
 
 class ItemCard extends StatelessWidget {
   final OptionsItem item;
-
   const ItemCard(this.item, {super.key}); // Constructor
 
   @override
   Widget build(BuildContext context) {
     return Material(
+      elevation: 1.0,
+      borderRadius: BorderRadius.circular(10.0),
       color: item.color,
       child: InkWell(
         // Area responsive terhadap sentuhan
