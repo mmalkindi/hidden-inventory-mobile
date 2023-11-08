@@ -33,12 +33,13 @@ Beberapa widget yang saya gunakan untuk menyelesaikan tugas ini:
 7. `GridView`: menampilkan *child* dalam display *grid*
 8. `Column`: menampilkan *child* secara vertikal
 9. `Row`: menampilkan *child* secara horizontal
-10. `Container`: menampilkan *child* dan menambahkan *padding* dan *margin*
-11. `Text`: menampilkan teks
-12. `Icon`: menampilkan material *icon*
-13. `Material`: menampilkan *child* dengan style Material Design
-14. `InkWell`: menampilkan *child* dengan area yang responsif input *tap*
-15. `Snackbar`: menampilkan Snackbar--- widget dibagian bawah layar yang menampilkan pesan singkat
+10. `Center`: menampilkan *child* ditengah
+11. `Container`: menampilkan *child* dan menambahkan *padding* dan *margin*
+12. `Text`: menampilkan teks
+13. `Icon`: menampilkan material *icon*
+14. `Material`: menampilkan *child* dengan style Material Design
+15. `InkWell`: menampilkan *child* dengan area yang responsif input *tap*
+16. `Snackbar`: menampilkan Snackbar--- widget dibagian bawah layar yang menampilkan pesan singkat
 
 > Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)
 

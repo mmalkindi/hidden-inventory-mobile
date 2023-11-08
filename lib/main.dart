@@ -20,7 +20,6 @@ class App extends StatelessWidget {
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
             brightness: Brightness.dark, seedColor: Colors.indigo),
-        brightness: Brightness.dark,
         useMaterial3: true,
       ),
       themeMode: ThemeMode.system,
