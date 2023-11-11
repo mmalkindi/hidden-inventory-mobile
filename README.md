@@ -16,17 +16,22 @@ Kelas : PBP A
 
 > Q: Jelaskan perbedaan antara `Navigator.push()` dan `Navigator.pushReplacement()`, disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!
 
-A: ...
+`Navigator.push()` akan menambah suatu `Route` ke route stack yang berada di Navigator.
+Method ini tidak mengubah riwayat `Route` yang telah dilewati, sehingga bisa digunakan `Navigator.pop()` untuk kembali ke halaman sebelumnya.
 
-> Q: Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+Sementara itu, `Navigator.pushReplacement()` akan menghapus route stack yang sudah ada dan menambahkan `Route` ke route stack tersebut.
+Method ini menghapus riwayat `Route` sebelumnya, sehingga dianggap `Route` yang di*push* adalah HEAD dari route stack yang baru.
+
+> Q: Jelaskan masing-masing *layout* widget pada Flutter dan konteks penggunaannya masing-masing!
 
 A: ...
 
 > Q: Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
 
-A: ...
+Untuk form ini, saya hanya menggunakan `TextFormField` sebagai elemen *input*.
+`TextFormField` sangat *versatile* dan dapat mengambil semua *input* yang dibutuhkan dengan baik (nama, *amount*, harga, deskripsi, dan *tags*).
 
-> Q: Bagaimana penerapan clean architecture pada aplikasi Flutter?
+> Q: Bagaimana penerapan *clean architecture* pada aplikasi Flutter?
 
 A: ...
 
