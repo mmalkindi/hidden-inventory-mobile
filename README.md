@@ -11,6 +11,29 @@ Kelas : PBP A
 | :-: |
 | [Tugas 7](#tugas-7-elemen-dasar-flutter) |
 | [Tugas 8](#tugas-8-flutter-navigation-layouts-forms-and-input-elements) |
+| [Tugas 9](#tugas-9-integrasi-layanan-web-django-dengan-aplikasi-flutter) |
+
+## Tugas 9: Integrasi Layanan Web Django dengan Aplikasi Flutter
+
+> Q: Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+A: ...
+
+> Q: Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+A: ...
+
+> Q: Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+A: ...
+
+> Q: Sebutkan seluruh *widget* yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+A: ...
+
+> Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+
+A: ...
 
 ## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
 
