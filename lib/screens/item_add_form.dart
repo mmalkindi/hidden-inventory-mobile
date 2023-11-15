@@ -37,6 +37,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
                     labelText: "Item Name",
                     border: OutlineInputBorder(
@@ -60,6 +61,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
                     labelText: "Amount",
                     border: OutlineInputBorder(
@@ -89,6 +91,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
                     labelText: "Price",
                     border: OutlineInputBorder(
@@ -118,6 +121,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
                     labelText: "Description",
                     border: OutlineInputBorder(
@@ -141,6 +145,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   decoration: InputDecoration(
                     labelText: "Tags",
                     border: OutlineInputBorder(
