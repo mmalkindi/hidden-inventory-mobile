@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hidden_inventory/widgets/left_drawer.dart';
+import 'package:hidden_inventory/widgets/item_card.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -10,7 +12,9 @@ class MyHomePage extends StatelessWidget {
         title: const Text(
           'Hidden Inventory',
         ),
+        foregroundColor: Colors.white,
       ),
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
@@ -67,53 +71,3 @@ final List<OptionsItem> items = [
       const Color.fromRGBO(141, 106, 212, 1.0)),
   OptionsItem("Logout", Icons.logout, const Color.fromRGBO(209, 77, 77, 1.0)),
 ];
-
-class ItemCard extends StatelessWidget {
-  final OptionsItem item;
-  const ItemCard(this.item, {super.key}); // Constructor
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      elevation: 1.0,
-      borderRadius: BorderRadius.circular(10.0),
-      color: item.color,
-      child: InkWell(
-        // Area responsive terhadap sentuhan
-        onTap: () {
-          // Memunculkan SnackBar ketika diklik
-          final snackBar = SnackBar(
-            content: Text("Kamu telah menekan tombol ${item.name}!"),
-            behavior: SnackBarBehavior.floating,
-          );
-
-          ScaffoldMessenger.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(snackBar);
-        },
-        child: Container(
-          // Container untuk menyimpan Icon dan Text
-          padding: const EdgeInsets.all(8),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  item.icon,
-                  color: Colors.white,
-                  size: 30.0,
-                ),
-                const Padding(padding: EdgeInsets.all(3)),
-                Text(
-                  item.name,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
