@@ -24,7 +24,15 @@ Method ini menghapus riwayat `Route` sebelumnya, sehingga dianggap `Route` yang 
 
 > Q: Jelaskan masing-masing *layout* widget pada Flutter dan konteks penggunaannya masing-masing!
 
-A: ...
+1. `AspectRatio`: Digunakan untuk mengatur ukuran *child* ke suatu aspect ratio (misal: Cover album dengan aspect ratio 1:1)
+2. `Center`: Digunakan untuk meletakkan *child* ke tengah dari parentnya. (misal: teks yang berada di tengah gambar)
+3. `Container`: Widget serbaguna yang dapat mengatur posisi, dekorasi, maupun ukuran dari childnya
+4. `Padding`: Digunakan untuk memberi *inset* pada *child*. (misal: teks dengan padding tertentu supaya tidak menyentuh ujung layar)
+5. `Column`: Digunakan untuk menampilkan *children* secara vertikal. (misal: mengatur *widget* lagu-lagu di suatu *playlist*)
+6. `Row`: Digunakan untuk menampilkan *children* secara horizontal. (misal: mengatur *widget* controls di bagian bawah *video*)
+7. `GridView`: Digunakan untuk menampilkan *children* pada suatu *grid* yang sama ukurannya dan diatur urutannya (misal: tombol angka di aplikasi kalkulator)
+8. `ListView`: Digunakan untuk menampilkan *children* pada suatu *list* linear yang dapat di*scroll*
+9. `Stack`: Digunakan untuk menampilkan *children* yang dapat *overlap* satu sama lainnya.
 
 > Q: Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
 
