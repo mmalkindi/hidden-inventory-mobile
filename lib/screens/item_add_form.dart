@@ -43,6 +43,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
+                  keyboardType: TextInputType.name,
                   onChanged: (String? value) {
                     setState(() {
                       _name = value!;
@@ -65,6 +66,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
+                  keyboardType: TextInputType.number,
                   onChanged: (String? value) {
                     setState(() {
                       _amount = int.parse(value!);
@@ -75,6 +77,9 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       return "Amount has to be a positive integer!";
                     }
                     if (int.tryParse(value) == null) {
+                      return "Amount has to be a positive integer!";
+                    }
+                    if (int.parse(value) <= 0) {
                       return "Amount has to be a positive integer!";
                     }
                     return null;
@@ -90,6 +95,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
+                  keyboardType: TextInputType.number,
                   onChanged: (String? value) {
                     setState(() {
                       _price = int.parse(value!);
@@ -100,6 +106,9 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       return "Price has to be a positive integer!";
                     }
                     if (int.tryParse(value) == null) {
+                      return "Price has to be a positive integer!";
+                    }
+                    if (int.parse(value) <= 0) {
                       return "Price has to be a positive integer!";
                     }
                     return null;
@@ -120,6 +129,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       _description = value!;
                     });
                   },
+                  keyboardType: TextInputType.multiline,
                   validator: (String? value) {
                     if (value == null || value.isEmpty) {
                       return "Description can't be empty!";
@@ -137,6 +147,7 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
+                  keyboardType: TextInputType.text,
                   onChanged: (String? value) {
                     setState(() {
                       _tags = value!;
@@ -164,14 +175,14 @@ class _AddItemFormPageState extends State<AddItemFormPage> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              title: const Text('Produk berhasil tersimpan'),
+                              title: const Text('Item saved succesfully'),
                               content: SingleChildScrollView(
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('Item Name: $_name'),
                                     Text('Amount: $_amount'),
-                                    Text('Price: $_price'),
+                                    Text('Price: \$$_price'),
                                     Text('Description: $_description'),
                                     Text('Tags: $_tags'),
                                   ],
