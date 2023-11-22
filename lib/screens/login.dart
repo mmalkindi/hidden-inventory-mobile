@@ -66,7 +66,6 @@ class _LoginPageState extends State<LoginPage> {
                 String password = _passwordController.text;
 
                 // Cek kredensial
-                // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                 // Untuk menyambungkan Android emulator dengan Django pada localhost,
                 // gunakan URL http://10.0.2.2/
                 final response =
@@ -84,13 +83,13 @@ class _LoginPageState extends State<LoginPage> {
                   );
                   ScaffoldMessenger.of(context)
                     ..hideCurrentSnackBar()
-                    ..showSnackBar(SnackBar(
-                        content: Text("$message Selamat datang, $uname.")));
+                    ..showSnackBar(
+                        SnackBar(content: Text("$message Welcome, $uname.")));
                 } else {
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: const Text('Login Gagal'),
+                      title: const Text('Login failed'),
                       content: Text(response['message']),
                       actions: [
                         TextButton(
