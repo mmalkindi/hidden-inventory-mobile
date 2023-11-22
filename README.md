@@ -21,7 +21,9 @@ A: ...
 
 > Q: Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
 
-A: ...
+Pertama, data difetch dari uri yang disediakan dan disimpan dalam bentuk `Future` (mirip seperti `Promise` di Javascript).
+Setelah fetch berhasil terjadi, `response` didecode menjadi `json` dan tiap objek di `json` akan dipindahkan ke suatu list `list_product`.
+List tersebut kemudian diiterasi dan ditampilkan data tiap fieldnya dalam widget `Text`.
 
 > Q: Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
 
@@ -33,7 +35,18 @@ A: ...
 
 > Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
 
-A: ...
+1. Membuat `django-app` bernama `authenticate` di project django sebelumnya
+2. Menambahkan konstanta dan string yang diperlukan ke `settings.py` yang ada di *root* folder
+3. Menambahkan function dan url yang berhubungan dengan `login` dan `logout` di `authenticate/views.py` dan `authenticate/urls.py`
+4. Menambahkan function dan url yang berhubungan dengan `create` item baru di `main/views.py` dan `main/urls.py`
+5. Melakukan deployment kembali ke PaaS PBP Fasilkom
+6. Menginstall package `provider`, `pbp_django_auth`, dan `http` ke flutter app
+7. Membuat model `Item` dengan bantuan [Quicktype](https://app.quicktype.io/) dan menyimpannya di `lib/models/item.dart`
+8. Membuat halaman *login* di flutter app dan menyimpan kodenya di `lib/screens/login.dart`
+9. Mengubah file `AndroidManifest.xml` supaya membolehkan *fetch* data dari internet
+10. Membuat halaman yang akan menampilkan semua `Item` dari web yang sudah di deploy. Kode halaman disimpan di `lib/screens/list_item.dart`
+11. Menambahkan *routing* navigasi ke halaman list `Item` di `lib/widgets/left_drawer.dart` dan `lib/widgets/item_card.dart`
+12. Mengimplementasi fitur *logout* di file `lib/widgets/item_card.dart`
 
 ## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
 
