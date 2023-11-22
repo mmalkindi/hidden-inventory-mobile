@@ -11,6 +11,67 @@ Kelas : PBP A
 | :-: |
 | [Tugas 7](#tugas-7-elemen-dasar-flutter) |
 | [Tugas 8](#tugas-8-flutter-navigation-layouts-forms-and-input-elements) |
+| [Tugas 9](#tugas-9-integrasi-layanan-web-django-dengan-aplikasi-flutter) |
+
+## Tugas 9: Integrasi Layanan Web Django dengan Aplikasi Flutter
+
+> Q: Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+Bisa saja karena field-field yang diperlukan ada di JSON hasil fetch.
+Namun, terutama untuk struktur data yang kompleks, akan lebih baik untuk membuat model supaya lebih rapih dan terstruktur ketika ingin digunakan oleh halaman lain di app flutter.
+
+> Q: Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+
+1. Data difetch dari uri yang disediakan dan disimpan dalam bentuk `Future` (mirip seperti `Promise` di Javascript).
+2. Setelah fetch berhasil terjadi, `response` didecode menjadi `json` dan tiap objek di `json` akan dipindahkan ke suatu list `list_product`.
+3. List tersebut kemudian diiterasi dan ditampilkan data tiap fieldnya dengan *widget* `Text` dan *layout widget* pendukung lainnya.
+
+> Q: Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+
+1. User menginput field `Username` dan `Password` yang ada di halaman *login* di flutter app
+2. Flutter app kemudian mengirimkan *request* ke webserver dengan data `username` dan `password` yang telah diinput
+3. Di web django, dilakukan autentikasi dengan data yang dikirim dari flutter app dan memvalidasinya
+4. Apabila *credentials* benar, *login* akan berjalan dengan lancar dan dikirimkan `JsonResponse` yang berisi `username`, `status`, dan `message`.
+   1. Apabila *credentials* salah, hanya `status` dan `message` yang disertakan dalam `JsonResponse`
+5. Saat menerima *response* dari web django, flutter app akan menampilkan `Snackbar` sesuai dengan `message` yang didapatkan
+   1. Apabila *login* berhasil, dilakukan navigasi ke halaman utama di flutter app
+   2. Apabila *login* tidak berhasil, user akan tetap di halaman *login*
+
+> Q: Sebutkan seluruh *widget* yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.
+
+Beberapa widget yang digunakan untuk tugas ini:
+
+1. `Provider`: wrapper untuk `InheritedWidget` sehingga *reusable*
+2. `StatefulWidget`: menyimpan *state* halaman *login* dan *list Item*
+3. `TextEditingController`: controller untuk `TextField` yang bisa diedit
+4. `TextField`: text field di halaman *login*
+5. `Container`: mempermudah layouting widget *children*
+6. `SizedBox`: menambahkan *spacing* vertikal
+7. `ElevatedButton`: tombol *login*
+8. `Scaffold`: mengimplementasi *basic* layout Material Design (dengan appbar dan body)
+9. `Snackbar`: menampilkan snackbar (pesan singkat bagian bawah layar)
+10. `Column`: menampilkan *children* secara berurutan vertikal
+11. `FutureBuilder`: widget yang akan membangun diri sendiri sesuai dengan interaksi *snapshot* terakhir dengan suatu `Future`
+12. `Center`: menampilkan *children* ditengah-tengah layout *parent*
+13. `ListView`: menampilkan *children* dalam suatu List
+14. `InkWell`: menampilkan *child* dengan area yang responsif input *tap*
+
+> Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
+
+1. Membuat `django-app` bernama `authenticate` di project django sebelumnya
+2. Menambahkan konstanta dan string yang diperlukan ke `settings.py` yang ada di *root* folder
+3. Menambahkan function dan url yang berhubungan dengan `login` dan `logout` di `authenticate/views.py` dan `authenticate/urls.py`
+4. Menambahkan function dan url yang berhubungan dengan `create` item baru di `main/views.py` dan `main/urls.py`
+5. Melakukan deployment kembali ke PaaS PBP Fasilkom
+6. Menginstall package `provider`, `pbp_django_auth`, dan `http` ke flutter app
+7. Membuat model `Item` dengan bantuan [Quicktype](https://app.quicktype.io/) dan menyimpannya di `lib/models/item.dart`
+8. Membuat halaman *login* di flutter app dan menyimpan kodenya di `lib/screens/login.dart`
+9. Mengubah file `AndroidManifest.xml` supaya membolehkan *fetch* data dari internet
+10. Membuat halaman yang akan menampilkan semua `Item` dari web yang sudah di deploy. Kode halaman disimpan di `lib/screens/list_item.dart`
+11. Menambahkan *routing* navigasi ke halaman list `Item` di `lib/widgets/left_drawer.dart` dan `lib/widgets/item_card.dart`
+12. Mengimplementasi fitur *logout* di file `lib/widgets/item_card.dart`
+13. Membuat halaman detail untuk suatu Item, disimpan di `lib/screens/item_detail.dart`
+14. Menambahkan function `onTap()` untuk navigasi ke halaman detail item yang sesuai pada setiap `InkWell` di `lib/widgets/list_item.dart`
 
 ## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
 
