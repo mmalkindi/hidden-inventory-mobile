@@ -10,6 +10,8 @@ Kelas : PBP A
 [![Release](https://github.com/mmalkindi/hidden-inventory-mobile/actions/workflows/release.yml/badge.svg)](https://github.com/mmalkindi/hidden-inventory-mobile/actions/workflows/release.yml)
 [![Build status](https://build.appcenter.ms/v0.1/apps/04650d0b-1be2-450c-b381-70debc19181e/branches/main/badge)](https://appcenter.ms)
 
+[📦 Download from Microsoft App Center](https://install.appcenter.ms/users/mmalkindi/apps/hidden-inventory/distribution_groups/public) or go to Releases
+
 | Jump ke tugas |
 | :-: |
 | [Tugas 7](#tugas-7-elemen-dasar-flutter) |
