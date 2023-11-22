@@ -7,6 +7,9 @@ Nama  : Muhammad Milian Alkindi
 Kelas : PBP A
 ```
 
+[![Release](https://github.com/mmalkindi/hidden-inventory-mobile/actions/workflows/release.yml/badge.svg)](https://github.com/mmalkindi/hidden-inventory-mobile/actions/workflows/release.yml)
+[![Build status](https://build.appcenter.ms/v0.1/apps/04650d0b-1be2-450c-b381-70debc19181e/branches/main/badge)](https://appcenter.ms)
+
 | Jump ke tugas |
 | :-: |
 | [Tugas 7](#tugas-7-elemen-dasar-flutter) |
