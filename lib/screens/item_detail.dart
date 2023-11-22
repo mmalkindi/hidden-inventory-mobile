@@ -11,7 +11,7 @@ class ItemDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Itemm Detail',
+          'Item Detail',
         ),
         centerTitle: true,
       ),
@@ -26,7 +26,6 @@ class ItemDetailPage extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.teal,
               ),
             ),
             Text(

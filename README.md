@@ -54,6 +54,7 @@ Beberapa widget yang digunakan untuk tugas ini:
 11. `FutureBuilder`: widget yang akan membangun diri sendiri sesuai dengan interaksi *snapshot* terakhir dengan suatu `Future`
 12. `Center`: menampilkan *children* ditengah-tengah layout *parent*
 13. `ListView`: menampilkan *children* dalam suatu List
+14. `InkWell`: menampilkan *child* dengan area yang responsif input *tap*
 
 > Q: Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).
 
@@ -69,7 +70,8 @@ Beberapa widget yang digunakan untuk tugas ini:
 10. Membuat halaman yang akan menampilkan semua `Item` dari web yang sudah di deploy. Kode halaman disimpan di `lib/screens/list_item.dart`
 11. Menambahkan *routing* navigasi ke halaman list `Item` di `lib/widgets/left_drawer.dart` dan `lib/widgets/item_card.dart`
 12. Mengimplementasi fitur *logout* di file `lib/widgets/item_card.dart`
-13. Membuat halaman detail untuk suatu 
+13. Membuat halaman detail untuk suatu Item, disimpan di `lib/screens/item_detail.dart`
+14. Menambahkan function `onTap()` untuk navigasi ke halaman detail item yang sesuai pada setiap `InkWell` di `lib/widgets/list_item.dart`
 
 ## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
 
