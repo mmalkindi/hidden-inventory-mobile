@@ -41,8 +41,8 @@ class ItemCard extends StatelessWidget {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ListItemPage()));
           } else if (item.name == "Logout") {
-            final response =
-                await request.logout("http://localhost:8000/auth/logout/");
+            final response = await request.logout(
+                "https://muhammad-milian-tugas.pbp.cs.ui.ac.id/auth/logout/");
             String message = response["message"];
             if (response['status']) {
               String uname = response["username"];
@@ -55,7 +55,7 @@ class ItemCard extends StatelessWidget {
               );
             } else {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text("$message"),
+                content: Text(message),
               ));
             }
           }

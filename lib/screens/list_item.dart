@@ -13,7 +13,7 @@ class ListItemPage extends StatefulWidget {
 
 class _ListItemPageState extends State<ListItemPage> {
   Future<List<Item>> fetchProduct() async {
-    var url = Uri.parse('http://localhost:8000/json/');
+    var url = Uri.parse('https://muhammad-milian-tugas.pbp.cs.ui.ac.id/json/');
     var response = await http.get(
       url,
       headers: {"Content-Type": "application/json"},
@@ -23,13 +23,13 @@ class _ListItemPageState extends State<ListItemPage> {
     var data = jsonDecode(utf8.decode(response.bodyBytes));
 
     // melakukan konversi data json menjadi object Item
-    List<Item> list_product = [];
+    List<Item> listItem = [];
     for (var d in data) {
       if (d != null) {
-        list_product.add(Item.fromJson(d));
+        listItem.add(Item.fromJson(d));
       }
     }
-    return list_product;
+    return listItem;
   }
 
   @override
