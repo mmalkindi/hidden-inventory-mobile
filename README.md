@@ -69,6 +69,7 @@ Beberapa widget yang digunakan untuk tugas ini:
 10. Membuat halaman yang akan menampilkan semua `Item` dari web yang sudah di deploy. Kode halaman disimpan di `lib/screens/list_item.dart`
 11. Menambahkan *routing* navigasi ke halaman list `Item` di `lib/widgets/left_drawer.dart` dan `lib/widgets/item_card.dart`
 12. Mengimplementasi fitur *logout* di file `lib/widgets/item_card.dart`
+13. Membuat halaman detail untuk suatu 
 
 ## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
 

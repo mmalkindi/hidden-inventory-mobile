@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hidden_inventory/screens/item_detail.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:hidden_inventory/models/item.dart';
@@ -59,7 +60,17 @@ class _ListItemPageState extends State<ListItemPage> {
                 } else {
                   return ListView.builder(
                       itemCount: snapshot.data!.length,
-                      itemBuilder: (_, index) => Container(
+                      itemBuilder: (_, index) => InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    ItemDetailPage(item: snapshot.data![index]),
+                              ),
+                            );
+                          },
+                          child: Container(
                             margin: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 12),
                             padding: const EdgeInsets.all(20.0),
@@ -88,7 +99,7 @@ class _ListItemPageState extends State<ListItemPage> {
                                     "${snapshot.data![index].fields.description}")
                               ],
                             ),
-                          ));
+                          )));
                 }
               }
             }));
